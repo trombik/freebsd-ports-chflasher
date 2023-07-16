@@ -13,12 +13,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyserial>=3.0:comms/py-pyserial@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}pyusb>=0:devel/py-pyusb@${PY_FLAVOR}
 
-USES=		python
+USES=		python shebangfix
 
 USE_GITHUB=	yes
 GH_TUPLE=	hexeguitar:CH55x_python_flasher:73fc5c5
 PLIST_FILES=	chflasher
 NO_BUILD=	yes
+SHEBANG_FILES=	${PORTNAME}.py
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/chflasher.py ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
