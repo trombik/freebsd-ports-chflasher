@@ -19,6 +19,7 @@ USE_GITHUB=	yes
 GH_TUPLE=	hexeguitar:CH55x_python_flasher:73fc5c5
 PLIST_FILES=	bin/chflasher
 NO_BUILD=	yes
+NO_ARCH=	yes
 SHEBANG_FILES=	${PORTNAME}.py
 
 do-install:
