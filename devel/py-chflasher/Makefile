@@ -17,11 +17,11 @@ USES=		python shebangfix
 
 USE_GITHUB=	yes
 GH_TUPLE=	hexeguitar:CH55x_python_flasher:73fc5c5
-PLIST_FILES=	chflasher
+PLIST_FILES=	bin/chflasher
 NO_BUILD=	yes
 SHEBANG_FILES=	${PORTNAME}.py
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/chflasher.py ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.py ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
